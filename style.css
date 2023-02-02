@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;                
+}
+
+.calcul-wrapper {
+    --bg-color: #e4f0ed;
+    --bg-buttons: #FFFFFF;
+    --bg-switcher: #F5F8FC;
+    --input-color: #373E47;
+    --position: flex-start;
+
+    background-color: var(--bg-color);
+    width: 280px;
+    height: 500px;
+    border-radius: 20px;
+    transition: all .4s linear;
+    overflow: hidden;
+
+}
+
+.buttons {
+    background-color: var(--bg-buttons);
+    transition: all .3s linear;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.calc-header {
+    padding: 15px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.h-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.h-btn1 {background-color: #FD544D;}
+.h-btn2 {background-color: #FFC02F;}
+.h-btn3 {background-color: #28CA40;}
+
+.switcher {
+    background-color: var(--bg-switcher);
+    border: 1px solid #ECF4F3;
+    border-radius: 10px;
+    width: 30px;
+    display: flex;
+    justify-content: var(--position);
+    cursor: pointer;
+}
+
+#switcher-checker {
+    display: none;
+}
+
+#switcher-checker:checked ~ .calcul-wrapper{
+    --bg-color: #212B41;
+    --bg-buttons: #2D384F;
+    --bg-switcher: #0DB387;
+    --input-color: #0DB387;
+    --position: flex-end;
+}
+
+.switcher-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #ECF4F3;
+}
+
+.screen {
+    height: 19%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.small{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 18px;
+    font-size: 16px;
+    color: #95A79F;
+}
+
+
+.screen input {
+    width: 100%;
+    height: 70%;
+    text-align: right;
+    color: var(--input-color);
+    font-size: 42px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 12px;
+}
+
+.button {
+    color: #95A79F;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.operation {
+    color: var(--input-color);
+    background-color: var(--bg-color);
+}
+
+.equal {
+    background-color: var(--bg-color);
+    color: var(--input-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

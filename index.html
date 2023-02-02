@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./calculator-fill.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="checkbox" id="switcher-checker">
+    <div class="calcul-wrapper">
+        <header class="calc-header">
+            <div class="header-buttons">
+                <div class="h-btn h-btn1"></div>
+                <div class="h-btn h-btn2"></div>
+                <div class="h-btn h-btn3"></div>
+            </div>
+            <label for="switcher-checker" class="switcher">
+                <div class="switcher-dot"></div>
+            </label>
+        </header>
+        <small class="small" id="ttt">0</small>
+        <div class="screen">
+            <input type="text" class="inp" readonly value="0">
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <div onclick="clearScreen()" class="button operation">C</div>
+                <div class="button operation">()</div>
+                <div onclick="prons()" class="button operation">%</div>
+                <div onclick="deleteItem()" class="button operation">D</div>
+            </div>
+            <div class="row">
+                <div onclick="writing(this)" class="button">7</div>
+                <div onclick="writing(this)" class="button">8</div>
+                <div onclick="writing(this)" class="button">9</div>
+                <div onclick="operations(this)" class="button operation">/</div>
+            </div>
+            <div class="row">
+                <div onclick="writing(this)" class="button">4</div>
+                <div onclick="writing(this)" class="button">5</div>
+                <div  onclick="writing(this)"class="button">6</div>
+                <div onclick="operations(this)" class="button operation">*</div>
+            </div>
+            <div class="row">
+                <div onclick="writing(this)" class="button">1</div>
+                <div onclick="writing(this)" class="button">2</div>
+                <div onclick="writing(this)" class="button">3</div>
+                <div onclick="operations(this)" class="button operation">-</div>
+            </div>
+            <div class="row">
+                <div onclick="dot()" class="button" id="numDot">.</div>
+                <div onclick="writing(this)"class="button">0</div>
+                <div onclick="equals(this)" class="button equal">=</div>
+                <div onclick="operations(this)" class="button operation">+</div>
+            </div>
+        </div>
+    </div>
+    <script src="./calcul.js"></script>
+</body>
+</html>
